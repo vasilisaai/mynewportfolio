@@ -17,18 +17,49 @@ app = Flask(__name__)
 
 freezer = Freezer(app)
 app.config.from_object(__name__)
-pages = FlatPages(app)
-
 
 # Path to the posts directory
 POSTS_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'posts')
 FASH_POSTS_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'posts', 'fashion')
 FT_POSTS_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'posts', 'feature')
 
-
 # Directory where images are stored
 IMAGE_FOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'posts', 'images')
 
+def get_all_posts_from_directory(directory):
+    posts = []
+    for filename in os.listdir(directory):
+        if filename.endswith('.md'):
+            posts.append({
+                'filename': filename,
+            })
+    return posts
+    
+@freezer.register_generator
+def get_image():
+    for filename in os.listdir(IMAGE_FOLDER):
+        yield 'get_image', {'filename': filename}
+
+@freezer.register_generator
+def generate_art_posts():
+    # This function will register all fashion posts
+    fashion_posts = get_all_posts_from_directory(POSTS_DIR)
+    for post in fashion_posts:
+        yield 'artpost', {'post_filename': post['filename']}
+
+@freezer.register_generator
+def generate_fashion_posts():
+    # This function will register all fashion posts
+    fashion_posts = get_all_posts_from_directory(FASH_POSTS_DIR)
+    for post in fashion_posts:
+        yield 'fashpost', {'post_filename': post['filename']}
+
+@freezer.register_generator
+def generate_misc_posts():
+    # This function will register all fashion posts
+    fashion_posts = get_all_posts_from_directory(FT_POSTS_DIR)
+    for post in fashion_posts:
+        yield 'miscpost', {'post_filename': post['filename']}
 
 def get_post(post_filename, DIR):
     post_path = os.path.join(DIR, post_filename)
@@ -110,7 +141,7 @@ def show_post(post_filename, directory):
     # Render the post to the template
     return post
 
-@app.route('/uploads/img/<filename>/')
+@app.route('/uploads/img/<filename>')
 def get_image(filename):
     # Serve the image from the uploads/img folder
     return send_from_directory(IMAGE_FOLDER, filename)

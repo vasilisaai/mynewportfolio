@@ -13,16 +13,60 @@
  
      <!-- BOOTSTRAP CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-     <link rel="stylesheet" href="static/main.css">
+     <link rel="stylesheet" href="static/css/main.css">
 
      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
+<style>
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 100vw;
+        height: 100vh;
+        padding: 0px;
+    }
+    
+    .logo {
+        max-height: 50px;
+        width: auto;
+    }
+    
+    .logo img {
+        padding-top: 10px;
+        height: 30%;
+        max-height: 190px;
+        width: auto;
+    }
+    
+    .secondary-header {
+        padding-top: 0;
+        font-family: 'Oswald', sans-serif;
+        font-size: 30px;
+    }
+    
+    .blurb {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .blurb a {
+        color: black;
+        text-decoration: underline; /* Underlines the link */
+        text-decoration-thickness: 1.5px; /* Makes the underline thinner */
+        text-decoration-color: red; /* Makes the underline thinner */
+    }
+    
+    .blurb a:hover {
+        color: red;
+        text-decoration-thickness: 1.5px; /* Makes the underline thinner */
+        text-decoration-color: red; /* Makes the underline thinner */
+    }
+</style>
 <body>
     <div class="logo image-container d-flex justify-content-center align-items-center " id="logo">
         <nav class="navbar">
             <div class="logo-container">
-                <a href="/" class="logo">
-                    <img src="uploads/img/logo.jpg/index.html" alt="Your Logo" class="logo-image" id="logo-image">
+                <a href="/mynewportolio" class="logo">
+                    <img src="uploads/img/logo.jpg" alt="Your Logo" class="logo-image" id="logo-image">
                 </a>
             </div>
         </nav>
@@ -39,18 +83,18 @@
     
     <div class="row justify-content-center g-4">
       <div class="col-4 image-container">
-        <a href="/art/post/010424.md">
-            <img src="uploads/img/010424.jpg/index.html" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
+        <a href="mynewportolio/art/post/010424.md">
+            <img src="uploads/img/010424.jpg" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
         </a>
       </div>
       <div class="col-4">
-        <a href="/art/post/060524.md">
-            <img src="uploads/img/060524.jpg/index.html" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
+        <a href="mynewportolio/art/post/060524.md">
+            <img src="uploads/img/060524.jpg" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
         </a>
       </div>
       <div class="col-4">
-        <a href="/misc/post/101823.md">
-            <img src="uploads/img/101823.jpg/index.html" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
+        <a href="mynewportolio/misc/post/101823.md">
+            <img src="uploads/img/101823.jpg" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
         </a>
       </div>
     </div>
@@ -59,12 +103,12 @@
   <div class="blurb container mt-4 mb-5">
     <p class="lead">
         This is my writing portfolio. I write and curate the most important 
-        <a href="/art" class="underline">art and design exhibitions</a>, 
-        <a href="/fashion" class="underline">exciting fashion news</a>, and at times,
-        <a href="/misc" class="underline">miscellaneous articles.</a>. Like this one, on 
-        <a href="/misc/post/070324.md/" class="underline">the world's best martinis</a> or 
-        <a href="/misc/post/101823.md/" class="underline">the opening of Fotografiska in an ex-artist's colony in Berlin</a>. If you like what you see, contact me 
-        <a href="/contact/" class="underline">here</a>.
+        <a href="/mynewportolio/art" class="underline">art and design exhibitions</a>, 
+        <a href="/mynewportolio/fashion" class="underline">exciting fashion news</a>, and at times,
+        <a href="/mynewportolio/misc" class="underline">miscellaneous articles.</a>. Like this one, on 
+        <a href="/mynewportolio/misc/post/070324.md/" class="underline">the world's best martinis</a> or 
+        <a href="/mynewportolio/misc/post/101823.md/" class="underline">the opening of Fotografiska in an ex-artist's colony in Berlin</a>. If you like what you see, contact me 
+        <a href="/mynewportolio/contact/" class="underline">here</a>.
         <br>
         <br>
         Website made by me.
