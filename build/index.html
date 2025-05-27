@@ -25,18 +25,6 @@
         padding: 0px;
     }
     
-    .logo {
-        max-height: 50px;
-        width: auto;
-    }
-    
-    .logo img {
-        padding-top: 10px;
-        height: 30%;
-        max-height: 190px;
-        width: auto;
-    }
-    
     .secondary-header {
         padding-top: 0;
         font-family: 'Oswald', sans-serif;
@@ -62,46 +50,70 @@
     }
 </style>
 <body>
-    <div class="logo image-container d-flex justify-content-center align-items-center " id="logo">
-        <nav class="navbar">
-            <div class="logo-container">
-                <a href="/mynewportfolio" class="logo">
-                    <img src="uploads/img/logo.jpg" alt="Your Logo" class="logo-image" id="logo-image">
+    <div class="container">
+        <div class="row align-items-end justify-content-center logo-box">
+            <div class="col-10 text-center align-items-start">
+                <a href="/mynewportfolio">
+                    <img src="uploads/img/logo.png" 
+                         alt="Your Logo" 
+                         class="logo-image img-fluid" 
+                         id="logo-image"
+                         style="padding-top: 35px">
                 </a>
             </div>
-        </nav>
-      </div>
+        </div>
+    </div>
       
     <div class="container align-items-center">
         
+<style>
+  .image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 4; /* standard landscape */
+  min-height: 150px;   /* fallback if aspect-ratio isn't supported */
+  overflow: hidden;
+}
 
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+</style>
 <div class="secondary-header container mt-1 text-center">
     <h1>MY WRITING</h1>
 </div>
     
 <div class="featured container mt-4">
     
-    <div class="row justify-content-center g-4">
-      <div class="col-4 image-container">
-        <a href="mynewportfolio/art/post/010424.md">
-            <img src="uploads/img/010424.jpg" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
-        </a>
-      </div>
-      <div class="col-4">
-        <a href="mynewportfolio/art/post/060524.md">
-            <img src="uploads/img/060524.jpg" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
-        </a>
-      </div>
-      <div class="col-4">
-        <a href="mynewportfolio/misc/post/101823.md">
-            <img src="uploads/img/101823.jpg" alt="Post Image" style="height: 200px; width: 100%; object-fit: cover;">
-        </a>
-      </div>
+  <div class="row g-4">
+    <div class="col-4">
+      <a href="/mynewportfolio/art/post/072424.md/">
+        <div class="image-wrapper">
+          <img src="uploads/img/072424.jpg" alt="Post Image" class="gallery-img">
+        </div>
+      </a>
+    </div>
+    <div class="col-4">
+      <a href="/mynewportfolio/art/post/060524.md/">
+        <div class="image-wrapper">
+          <img src="uploads/img/060524.jpg" alt="Post Image" class="gallery-img">
+        </div>
+      </a>
+    </div>
+    <div class="col-4">
+      <a href="/mynewportfolio/misc/post/101823.md/">
+        <div class="image-wrapper">
+          <img src="uploads/img/101823.jpg" alt="Post Image" class="gallery-img">
+        </div>
+      </a>
     </div>
   </div>
 
-  <div class="blurb container mt-4 mb-5">
-    <p class="lead">
+  <div class="blurb row mt-4 mb-5 justify-content-center align-items-center">
+    <p class="lead col-md-8 col-sm-12" style="font-size: x-large;">
         This is my writing portfolio. I write and curate the most important 
         <a href="/mynewportfolio/art" class="underline">art and design exhibitions</a>, 
         <a href="/mynewportfolio/fashion" class="underline">exciting fashion news</a>, and at times,

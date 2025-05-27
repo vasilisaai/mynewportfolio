@@ -24,8 +24,9 @@ body {
 }
 
 .blurb {
-    padding-left: 50px;
-    padding-right: 50px;
+
+    font-size: xx-large;
+    background-color: blue;
 }
 
 .blurb a {
