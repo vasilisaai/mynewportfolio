@@ -25,18 +25,6 @@
         padding: 0px;
     }
     
-    .logo {
-        max-height: 50px;
-        width: auto;
-    }
-    
-    .logo img {
-        padding-top: 10px;
-        height: 30%;
-        max-height: 190px;
-        width: auto;
-    }
-    
     .secondary-header {
         padding-top: 0;
         font-family: 'Oswald', sans-serif;
@@ -62,15 +50,19 @@
     }
 </style>
 <body>
-    <div class="logo image-container d-flex justify-content-center align-items-center " id="logo">
-        <nav class="navbar">
-            <div class="logo-container">
-                <a href="/mynewportolio" class="logo">
-                    <img src="{{ url_for('get_image', filename='logo.jpg') }}" alt="Your Logo" class="logo-image" id="logo-image">
+    <div class="container">
+        <div class="row align-items-end justify-content-center logo-box">
+            <div class="col-10 text-center align-items-start">
+                <a href="/mynewportfolio">
+                    <img src="{{ url_for('get_image', filename='name-logo.png') }}" 
+                         alt="Your Logo" 
+                         class="logo-image img-fluid" 
+                         id="logo-image"
+                         style="padding-top: 35px">
                 </a>
             </div>
-        </nav>
-      </div>
+        </div>
+    </div>
       
     <div class="container align-items-center">
         {% block content %}

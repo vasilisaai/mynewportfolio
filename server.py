@@ -2,6 +2,8 @@ from flask import Flask, render_template, send_from_directory
 from flask_frozen import Freezer
 from flask_flatpages import FlatPages
 import re
+from datetime import datetime
+
 
 
 import markdown
@@ -106,19 +108,27 @@ def load_posts(directory, file_extension=".md"):
     for post_filename in os.listdir(directory):
         if post_filename.endswith(file_extension):
             img, url, caption, title, preview_html, subtitle = get_fashion_post(post_filename, directory)
-            img = post_filename.strip(file_extension)
-            img += ".jpg"
+            img_name = post_filename.strip(file_extension) + ".jpg"
             posts.append({
                 'filename': post_filename,                
-                'img': img,
+                'img': img_name,
                 'url': url,
                 'subtitle': subtitle,
                 'caption': caption,
                 'title': title,
                 'preview_html': preview_html
             })
-    return posts
 
+    # Define a function to extract a date object from the img field
+    def extract_date(post):
+        raw_date = post_filename[:-3]
+        return datetime.strptime(raw_date, "%m%d%y")
+
+    # Now sort using this function
+    posts = sorted(posts, key=extract_date, reverse=False)
+
+    return posts
+    
 def show_post(post_filename, directory):
     post = {}
     if post_filename.endswith('.md'):
@@ -157,9 +167,11 @@ def art():
         subheader_text="Things you should see: the latest thrilling art and design shows, curated by me.",
         publication="The Grand Tourist")
 
+
 @app.route('/art/post/<post_filename>/')
 def artpost(post_filename):
     post = show_post(post_filename, POSTS_DIR)
+
     return render_template('post.html', post_filename=post_filename, post=post, header_text="ART LISTINGS")
 
 @app.route('/fashion/')

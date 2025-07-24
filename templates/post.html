@@ -2,13 +2,11 @@
 
 {% block content %}
 <style>
-    #logo-box{
-        height: 60px;
-        align-items: flex-start;
-        border: red solid;
-    }
     #logo-image {
-        height: 50px;
+        height: 40px;
+        padding-top: 5px !important;
+        padding-bottom: 25px;
+        
     }
     .secondary-header {
         font-family: 'Oswald', sans-serif;
@@ -72,8 +70,9 @@
     object-fit: contain;
 }
 </style>
+
 <div class="container text-center" id="smaller">
-    <a class = "secondary-header" href="mynewportolio/{{ request.path.split('/')[1] }}/" style="text-decoration: none; color: inherit;">{{ header_text }}</a>
+    <a class = "secondary-header" href="https://vasilisaai.github.io/mynewportfolio/{{ request.path.split('/')[1] }}/" style="text-decoration: none; color: inherit;">{{ header_text }}</a>
 </div>
 <hr> 
 

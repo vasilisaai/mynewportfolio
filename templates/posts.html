@@ -2,13 +2,10 @@
 
 {% block content %}
 <style>
-    #logo-box{
-        height: 60px;
-        align-items: flex-start;
-        border: red solid;
-    }
     #logo-image {
-        height: 50px;
+        height: 40px;
+        padding-top: 5px !important;
+        padding-bottom: 15px;
     }
     .subheader {
         text-align: center;
@@ -22,6 +19,7 @@
     padding-top: 40px;
   }
   .post {
+    
     font-size: small;
     border-bottom: 1px solid #000000;
     padding: 10px;
@@ -49,7 +47,6 @@
 <div class="secondary-header container text-center">
     <h1>{{ header_text }}</h1>
 </div>
-
 <div class="subheader container">
     {{ subheader_text }}
 </div>
