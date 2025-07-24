@@ -68,41 +68,64 @@
         height: 60px;
         padding-top: 5px !important;
     }
+
     .subheader {
         text-align: center;
-        width: 50vw;
-        min-width: 500px;
         font-size: xx-large;
     }
+
     .post-feed {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-top: 40px;
+        padding: 20px;
+        margin: 0 auto;
     }
+
     .post {
-        
         font-size: small;
         border-bottom: 1px solid #000000;
-        padding: 10px;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding: 20px 10px;
     }
+
     .featured-img img {
-        width: 200px; 
-        height: 200px; 
+        width: 200px;
+        height: 200px;
         object-fit: cover;
+        max-height: 200px;
     }
+
     .title {
         color: #000;
         text-decoration: none;
     }
+
     .title:hover {
         color: black;
         text-decoration: underline;
-        text-decoration-thickness: 1.5px; 
+        text-decoration-thickness: 1.5px;
         text-decoration-color: red;
     }
+
+    @media (max-width: 768px) {
+        .post {
+            text-align: left;
+        }
+
+        .featured-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 200px;
+        }
+
+
+        .post .col-6,
+        .post .col-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
 </style>
+
 
 <div class="secondary-header container text-center">
     <h1 style="font-weight: bold">MORE FROM ME</h1>
@@ -114,90 +137,95 @@
 <div class="post-feed container">
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/misc/post/010324.md">Buddhist Wisdom, Italian Simplicity</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/misc/post/010324.md">
+                    Buddhist Wisdom, Italian Simplicity
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>01.03.24</div>
-                    </div>
+                    
+                    
+                    <div>01.03.24</div>
                     <div>The Grand Tourist</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/010324.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/010324.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/misc/post/102923.md">The Good Boys of Britain</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/misc/post/102923.md">
+                    The Good Boys of Britain
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>10.29.23</div>
-                    </div>
+                    
+                    
+                    <div>10.29.23</div>
                     <div>The Grand Tourist</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/102923.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/102923.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/misc/post/101823.md">Was Geht, Berlin?</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/misc/post/101823.md">
+                    Was Geht, Berlin?
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>10.18.23</div>
-                    </div>
+                    
+                    
+                    <div>10.18.23</div>
                     <div>The Grand Tourist</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/101823.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/101823.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/misc/post/070324.md">This Italian Expat in London is Raising the Bar for Martinis to Extraordinary Heights</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/misc/post/070324.md">
+                    This Italian Expat in London is Raising the Bar for Martinis to Extraordinary Heights
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>07.03.24</div>
-                    </div>
+                    
+                    
+                    <div>07.03.24</div>
                     <div>The Grand Tourist</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/070324.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/070324.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
 </div>
+
 
 </body>
 

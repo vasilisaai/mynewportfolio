@@ -68,41 +68,64 @@
         height: 60px;
         padding-top: 5px !important;
     }
+
     .subheader {
         text-align: center;
-        width: 50vw;
-        min-width: 500px;
         font-size: xx-large;
     }
+
     .post-feed {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-top: 40px;
+        padding: 20px;
+        margin: 0 auto;
     }
+
     .post {
-        
         font-size: small;
         border-bottom: 1px solid #000000;
-        padding: 10px;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding: 20px 10px;
     }
+
     .featured-img img {
-        width: 200px; 
-        height: 200px; 
+        width: 200px;
+        height: 200px;
         object-fit: cover;
+        max-height: 200px;
     }
+
     .title {
         color: #000;
         text-decoration: none;
     }
+
     .title:hover {
         color: black;
         text-decoration: underline;
-        text-decoration-thickness: 1.5px; 
+        text-decoration-thickness: 1.5px;
         text-decoration-color: red;
     }
+
+    @media (max-width: 768px) {
+        .post {
+            text-align: left;
+        }
+
+        .featured-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 200px;
+        }
+
+
+        .post .col-6,
+        .post .col-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
 </style>
+
 
 <div class="secondary-header container text-center">
     <h1 style="font-weight: bold">FASHION NEWS</h1>
@@ -114,321 +137,337 @@
 <div class="post-feed container">
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/071523.md">Dries Van Noten’s Parisian Fragrance Heaven</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/071523.md">
+                    Dries Van Noten’s Parisian Fragrance Heaven
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>07.15.23</div>
-                    </div>
+                    
+                    
+                    <div>07.15.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/071523.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/071523.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/072323.md">See Air Afrique, a New Magazine Celebrating Pan-African Creativity</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/072323.md">
+                    See Air Afrique, a New Magazine Celebrating Pan-African Creativity
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>07.23.23</div>
-                    </div>
+                    
+                    
+                    <div>07.23.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/072323.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/072323.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/090323.md">A Coco Chanel Exhibit is Coming to London’s V&amp;A Museum</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/090323.md">
+                    A Coco Chanel Exhibit is Coming to London’s V&amp;A Museum
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>09.03.23</div>
-                    </div>
+                    
+                    
+                    <div>09.03.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/090323.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/090323.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/101723.md">Givenchy Atelier is Here For Your Evening Dressing Needs</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/101723.md">
+                    Givenchy Atelier is Here For Your Evening Dressing Needs
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>10.17.23</div>
-                    </div>
+                    
+                    
+                    <div>10.17.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/101723.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/101723.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/081623.md">Moncler and Billionaire Boys Club Are Teaming Up</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/081623.md">
+                    Moncler and Billionaire Boys Club Are Teaming Up
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>08.16.23</div>
-                    </div>
+                    
+                    
+                    <div>08.16.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/081623.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/081623.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/050523.md">Guess How Fast Blackpink’s Jennie Collaboration With Calvin Klein Will Sell Out?</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/050523.md">
+                    Guess How Fast Blackpink’s Jennie Collaboration With Calvin Klein Will Sell Out?
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>05.05.23</div>
-                    </div>
+                    
+                    
+                    <div>05.05.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/050523.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/050523.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/101123.md">Loro Piana’s Ready For Cocooning Season</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/101123.md">
+                    Loro Piana’s Ready For Cocooning Season
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>10.11.23</div>
-                    </div>
+                    
+                    
+                    <div>10.11.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/101123.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/101123.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/100723.md">An Unexpected Luxury Fashion and Beauty Crossover</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/100723.md">
+                    An Unexpected Luxury Fashion and Beauty Crossover
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>10.07.23</div>
-                    </div>
+                    
+                    
+                    <div>10.07.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/100723.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/100723.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/090923.md">See Bottega Veneta’s Winter Fanzine</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/090923.md">
+                    See Bottega Veneta’s Winter Fanzine
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>09.09.23</div>
-                    </div>
+                    
+                    
+                    <div>09.09.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/090923.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/090923.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/061523.md">A Summer Drop For The Downtown Set</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/061523.md">
+                    A Summer Drop For The Downtown Set
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>06.15.23</div>
-                    </div>
+                    
+                    
+                    <div>06.15.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/061523.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/061523.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/070723.md">Burberry Opens the Doors to Its Redesigned Fifth Avenue Flagship</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/070723.md">
+                    Burberry Opens the Doors to Its Redesigned Fifth Avenue Flagship
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>07.07.23</div>
-                    </div>
+                    
+                    
+                    <div>07.07.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/070723.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/070723.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/060523.md">Moschino Revisits the 80s With Their Newest Line</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/060523.md">
+                    Moschino Revisits the 80s With Their Newest Line
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>06.05.23</div>
-                    </div>
+                    
+                    
+                    <div>06.05.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/060523.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/060523.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/092123.md">Window Shop Burberry’s Winter Collection Now</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/092123.md">
+                    Window Shop Burberry’s Winter Collection Now
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>09.21.23</div>
-                    </div>
+                    
+                    
+                    <div>09.21.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/092123.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/092123.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/080923.md">Victoria’s Secret Latest Collection Brings Back the Era of the Supermodel</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/080923.md">
+                    Victoria’s Secret Latest Collection Brings Back the Era of the Supermodel
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>08.09.23</div>
-                    </div>
+                    
+                    
+                    <div>08.09.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/080923.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/080923.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
         <div class="post row align-items-center">
-            <div class="col-6">
-                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/071623.md">Peter Do is Coming to a Banana Republic Near You</a>
+            <div class="col-12 col-md-6 text-start">
+                <a class="title" href="https://vasilisaai.github.io/mynewportfolio/fashion/post/071623.md">
+                    Peter Do is Coming to a Banana Republic Near You
+                </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-left text-start mb-2 mb-md-0">
                 <div class="publication" style="font-style: italic; margin: 8px;">
-                    <div>  
-                        
-                        <div>07.16.23</div>
-                    </div>
+                    
+                    
+                    <div>07.16.23</div>
                     <div>10 Magazine USA</div>
                     <br>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-3 text-md-end text-align-left">
                 <div class="featured-img">
-                    <img src="../uploads/img/071623.jpg" alt="Post Image">
+                    <img class="img-fluid" src="../uploads/img/071623.jpg" alt="Post Image">
                 </div>
             </div>
         </div>
     
 </div>
+
 
 </body>
 
